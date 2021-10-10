@@ -1,19 +1,23 @@
 import React,{useState,useEffect} from 'react'
 import {Form,Button} from "react-bootstrap";
+import { Formik, Field, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
+
 
 function Login() {
+
 
     const [username,setUsername]=useState('');
     const [password,setPassword]=useState('');
 
     const onSubmit=(e)=>{
-        e.preventDefault();
+        
         console.log(username);
         console.log(password);
     }
 
     const validateForm=()=>{
-            return true;
+        return true;
     }
 
     return (
@@ -28,7 +32,9 @@ function Login() {
                         placeholder="Username"
                         name="username"
                         onChange={(e)=>setUsername(e.target.value)}
+                
                     />
+                   
                 </Form.Group>
 
                 <Form.Group>
@@ -43,7 +49,7 @@ function Login() {
                     />
                 </Form.Group>
 
-                <Button  onClick={onSubmit} disabled={!validateForm()}>Submit</Button>
+                <Button  onClick= {onSubmit}>Submit</Button>
             
             </Form>
         </div>
