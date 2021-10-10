@@ -3,7 +3,7 @@ import Header from './components/Header/Header.js';
 import {BrowserRouter as Router , Link ,Route,Switch} from "react-router-dom";
 import Home from './components/Home';
 import Login from './components/Login.js';
-import SignupForm from './components/SignupForm.js';
+import SignupForm from './components/SignUpPage/SignupForm.js';
 
 function App() {
   return (
@@ -27,6 +27,7 @@ function App() {
           
           <Route path="/">
             <Header/>
+            <Home/>
           </Route>
           
         </Switch>
